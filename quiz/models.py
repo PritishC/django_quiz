@@ -388,6 +388,11 @@ class Sitting(models.Model):
 
     end = models.DateTimeField(null=True, blank=True, verbose_name=_("End"))
 
+    time_taken = models.IntegerField(
+        verbose_name=_("Time Taken (seconds)"),
+        blank=True, default=0
+    )
+
     objects = SittingManager()
 
     class Meta:
